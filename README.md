@@ -1,4 +1,4 @@
-# Openweathermap
+# SimpleOpenWeatherMap
 
 A simple ruby language library for the OpenWeatherMap API.
 This library doesn't have functions enough to call the OpenWeatherMap API because I basically made this to display current weather and forecast to my desktop using the GeekTool.
@@ -9,7 +9,7 @@ But I think this library helps you to call the OpenWeatherMap API with using or 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'openweathermap'
+gem 'simple_open_weather_map'
 ```
 
 And then execute:
@@ -18,14 +18,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install openweathermap
+    $ gem install simple_open_weather_map
 
 ## Usage
 
 ```ruby
-require 'openweathermap'
+require 'simple_open_weather_map'
 
-conf = Openweathermap::Config({
+conf = simple_open_weather_map::Config({
   app_id: "your APPID",        # Get from OpenWeatherMap.org",
   city_id: 1234,               # integer: specify city id.
   unit: "metric",              # metric or kelvin. Default: metric
@@ -33,7 +33,7 @@ conf = Openweathermap::Config({
   save_icon_dir: "~/Pictures", # Specify directory path to save weather icon. Default: /tmp
   forecast_days: 7,            # Specify number of days to get forecast. Default: 7
 })
-weather = Openweathermap::Weather.new
+weather = simple_open_weather_map::Weather.new
 current = weather.current(conf) # returns json formatted content.
 forecast = weather.forecast(conf) # returns json formatted content.
 icon_path = weather.icon_path # returns path of current weather icon.
@@ -52,7 +52,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/openweathermap. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/whize/simple_open_weather_map. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
